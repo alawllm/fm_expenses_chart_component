@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: hsl(28, 39%, 94%);
+}
+
+.card {
+    font-family: 'DM Sans';
+}
+
+.upper-section {
+    background-color: hsl(10, 79%, 65%);
+    padding: 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.lower-section {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    color: hsl(28, 10%, 53%)
+}
+
+.lower-section h1 {
+    color: hsl(25, 47%, 15%);
+    font-size: 1.5rem;
+}
+
+.attribution {
+    font-family: 'DM Sans';
+    color: hsl(28, 10%, 53%);
+    margin-top: 10%;
+}
