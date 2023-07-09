@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="remedy.css">
   <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Expenses chart component</title>
@@ -26,17 +27,33 @@
     </div>
     <div class="lower-section">
       <h1>Spending - Last 7 days</h1>
-      <div class="bar-chart">
-        mon
-        tue
-        wed
-        thu
-        fri
-        sat
-        sun
-
+      <div class="container-bar-chart">
+        <figure id="mon" class="bar">
+          <figcaption>mon</figcaption>
+        </figure>
+        <figure id="tue" class="bar">
+          <figcaption>tue</figcaption>
+        </figure>
+        <figure id="wed" class="bar">
+          <figcaption>wed</figcaption>
+        </figure>
+        <figure id="thu" class="bar">
+          <figcaption>thu</figcaption>
+        </figure>
+        <figure id="fri" class="bar">
+          <figcaption>fri</figcaption>
+        </figure>
+        <figure id="sat" class="bar">
+          <figcaption>sat</figcaption>
+        </figure>
+        <figure id="sun" class="bar">
+          <figcaption>sun</figcaption>
+        </figure>
       </div>
-      <div class="text-under-bar">
+
+      <hr>
+
+      <div class="container-under-bar">
         <div class="left-section">
           <p class="text-small"> Total this month</p>
           <p class="num-big">$478.33</p>
@@ -54,7 +71,8 @@
     Coded by <a href="#">Ala</a>.
   </div>
 
-  <script src="app.js"></script>
+  <script type="module" src="./app.js"></script>
+
 </body>
 
 </html>
