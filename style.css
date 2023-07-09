@@ -36,18 +36,26 @@ body {
 
 .container-bar-chart {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: space-between;
     margin: 0;
     text-align: center;
 }
 
 
-
 .bar {
     margin: 10px;
+    width: 40px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
+.bar figcaption {
+    padding-top: -40px;
+}
 
 
 .attribution {
