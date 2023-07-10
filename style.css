@@ -70,6 +70,7 @@ body {
     border-radius: 5px;
     padding: 0.5rem;
     width: 2.1rem;
+    position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -81,6 +82,21 @@ body {
 .bar:hover {
     cursor: pointer;
 }
+
+.bar:hover::after {
+    background-color: rgba(39, 30, 30, 0.859);
+    content: attr(data-amount);
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: -5px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 20px;
+    padding: 5px;
+}
+
 
 .active-bar {
     background-color: hsl(186, 34%, 60%);

@@ -34,8 +34,6 @@ let jsonArr = JSON.parse(json)
 //finding the max amount
 let maxAmount = 0;
 for (let i = 0; i < jsonArr.length; i++) {
-    console.log(jsonArr[i].amount)
-    console.log(jsonArr[i].day)
     const amount = jsonArr[i].amount
     if (amount > maxAmount) {
         maxAmount = amount;
@@ -47,11 +45,15 @@ for (let i = 0; i < jsonArr.length; i++) {
 for (let i = 0; i < jsonArr.length; i++) {
     const amount = jsonArr[i].amount;
     let barHeight = (amount / maxAmount) * 150
-    console.log(barHeight)
-
+    //assigning height to the given days
     const bar = document.querySelector(`#${jsonArr[i].day}`)
     bar.style.height = `${barHeight}px`
+    //assigning correct amount to the bar elements in html through dataset
+    bar.dataset.amount = `${amount}$`
+    console.log(bar.dataset.amount)
 }
+
+
 
 //finding current day of the week
 const daysOfWeek = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
@@ -63,4 +65,6 @@ console.log(currentDayName)
 //setting custom color for the current day of the week
 const activeBar = document.getElementById(`${currentDayName}`)
 activeBar.classList.add('active-bar')
+
+//showing current amount upon hovering on a given day
 
