@@ -31,10 +31,6 @@ const json = `[
 
 let jsonArr = JSON.parse(json)
 
-console.log(jsonArr[0].amount)
-console.log(jsonArr[3].day)
-
-
 //finding the max amount
 let maxAmount = 0;
 for (let i = 0; i < jsonArr.length; i++) {
@@ -46,9 +42,8 @@ for (let i = 0; i < jsonArr.length; i++) {
     }
 }
 
-console.log(maxAmount)
 //setting bar height
-//choosing bar, in dom etc
+//choosing bar, in dom 
 for (let i = 0; i < jsonArr.length; i++) {
     const amount = jsonArr[i].amount;
     let barHeight = (amount / maxAmount) * 150
@@ -58,22 +53,14 @@ for (let i = 0; i < jsonArr.length; i++) {
     bar.style.height = `${barHeight}px`
 }
 
+//finding current day of the week
+const daysOfWeek = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+const currentDate = new Date;
+const currentDay = currentDate.getDay();
+const currentDayName = daysOfWeek[currentDay]
+console.log(currentDayName)
+
 //setting custom color for the current day of the week
-
-console.log(maxAmount)
-
-
-
-
-
-// function makeBars(jsonData) {
-//     //find the max height for the bar
-//     //specify the ratio - amount / max amount
-//     //iterate over json array, set the height of the bars
-//     //find current date, highlight it with a different color
-//     let maxAmount = 0;
-
-
-// }
-
+const activeBar = document.getElementById(`${currentDayName}`)
+activeBar.classList.add('active-bar')
 
