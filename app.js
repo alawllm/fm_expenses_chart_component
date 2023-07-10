@@ -49,11 +49,9 @@ for (let i = 0; i < jsonArr.length; i++) {
     const bar = document.querySelector(`#${jsonArr[i].day}`)
     bar.style.height = `${barHeight}px`
     //assigning correct amount to the bar elements in html through dataset
-    bar.dataset.amount = `${amount}$`
+    bar.dataset.amount = `$${amount}`
     console.log(bar.dataset.amount)
 }
-
-
 
 //finding current day of the week
 const daysOfWeek = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
@@ -65,6 +63,3 @@ console.log(currentDayName)
 //setting custom color for the current day of the week
 const activeBar = document.getElementById(`${currentDayName}`)
 activeBar.classList.add('active-bar')
-
-//showing current amount upon hovering on a given day
-
